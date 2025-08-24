@@ -46,14 +46,16 @@
 			};
 		};
 	};
+
+	L19: memory@80000000 {
+		device_type = "memory";
+		reg = <0x80000000 0x40000000>;
+	};
+
 	L24: memory@8000000 {
 		device_type = "memory";
 		reg = <0x8000000 0x10000>;
 		status = "disabled";
-	};
-	L19: memory@80000000 {
-		device_type = "memory";
-		reg = <0x80000000 0x40000000>;
 	};
 	L1: soc {
 		#address-cells = <1>;
@@ -143,8 +145,6 @@
 			reg = <0x64000000 0x1000>;
 			reg-names = "control";
 			clock-frequency = <50000000>;
-			current-speed = <115200>;
-    		status = "okay";
 		};
 		L26: spi@64001000 {
 			#address-cells = <1>;
