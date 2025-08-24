@@ -1,0 +1,12 @@
+if TARGET_GENESYS2
+
+config SYS_BOARD
+    default "genesys2"
+
+config SYS_VENDOR
+    default "digilent"
+
+config SYS_CONFIG_NAME
+    default "genesys2"
+
+endif

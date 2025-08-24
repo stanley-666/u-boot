@@ -93,7 +93,7 @@ call_board_init_f:
 #if CONFIG_IS_ENABLED(HAVE_INIT_STACK)
 	li	t0, CONFIG_VAL(STACK)
 #else
-	li	t0, SYS_INIT_SP_ADDR
+	li	t0, 0x8009FE00
 #endif
 	and	t0, t0, -16		/* force 16 byte alignment */
 

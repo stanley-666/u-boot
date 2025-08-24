@@ -8,6 +8,12 @@ choice
 	prompt "Target select"
 	optional
 
+config TARGET_GENESYS2
+    bool "Support Genesys2 RISC-V SoC"
+    select CPU_GENERIC
+    help
+      Enable support for the Genesys2 RISC-V FPGA SoC board.
+
 config TARGET_ANDES_AE350
 	bool "Support Andes ae350"
 
@@ -103,6 +109,7 @@ config SPL_ZERO_MEM_BEFORE_USE
 	  Sifive core devices that uses L2 cache to store SPL.
 
 # board-specific options below
+source "board/digilent/genesys2/Kconfig"
 source "board/andestech/ae350/Kconfig"
 source "board/andestech/voyager/Kconfig"
 source "board/aspeed/ibex_ast2700/Kconfig"
